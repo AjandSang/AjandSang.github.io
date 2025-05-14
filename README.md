@@ -8,7 +8,7 @@
 
 
 <p style="font-size: 20px;text-align:center; line height = 20px : margin-bottom: 20px; ">
-This is our very first website and <b> we,re extremely excited !!!!!!!!!!! </b>
+This is our very first website and <b> we're extremely excited !!!!!!!!!!! </b>
 <br>This website looks bland for obvious reasons <br> hehe 
 still working so...</p>
 
@@ -20,9 +20,9 @@ still working so...</p>
 <h1 style="font-size: 50px;text-align:center; "> random images for absolutely no reason </h1>
 
 
-<img style="width: 33%;" src="image4.png">
-<img style="width: 33%;" src="image3.png">
-<img style="width: 33%;" src="image2.png">
+<img style=" width: 33%;" src="image4.png">
+<img style=" width: 33%;" src="image3.png">
+<img style=" width: 33%;" src="image2.png">
 <hr>
 
 <h1 style="font-size: 50px;text-align:center; margin-below: 80px"> now the main stuff  </h1>
