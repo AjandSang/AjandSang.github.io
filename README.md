@@ -39,5 +39,5 @@ i mean seriously <br>
 <div style = " text-align:center; margin-top: 20px;">
 <a style = " padding-bottom: 20px;" href="https://drive.google.com/drive/folders/1jBFG03fQGBMwHQBIXF-xAGLVP4H9pHil?usp=sharing">Autumn 2024</a> 
 <br><hr>
-<a " padding-bottom: 20px;" href="https://drive.google.com/drive/folders/177231ZvCZp-u6IimiZ4ZCrYXP1nIRpO2?usp=sharing">Spring 2024</a>
+<a style = " padding-bottom: 20px;" href="https://drive.google.com/drive/folders/177231ZvCZp-u6IimiZ4ZCrYXP1nIRpO2?usp=sharing">Spring 2024</a>
 </div>
