@@ -24,7 +24,7 @@ still working so...</p>
 
 <img style="width: 33%;" src="image4.png">
 <img style="width: 33%;"src="image3.png">
-<img style="width: 33%;" src="image2.png">
+<img style="width: 33%;"src="image2.png">
 <hr>
 
 <h1 style="font-size: 50px;text-align:center; margin-below: 80px"> now the main stuff  </h1>
