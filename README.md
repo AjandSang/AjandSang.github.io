@@ -1,1 +1,43 @@
 # AjandSang.github.io
+<div style = " text-align:center; margin-top: 20px;"><img style="width: 33%;" src="image5.png">
+ </div>
+
+
+
+<h1 style="font-size: 70px;text-align:center; "> Hello random person </h1>
+
+
+
+
+<p style="font-size: 20px;text-align:center; line height = 20px : margin-bottom: 20px; ">
+This is our very first website and <b> we,re extremely excited !!!!!!!!!!! </b>
+<br>This website looks bland for obvious reasons <br> hehe 
+still working so...</p>
+
+<p style="font-size: 20px;text-align:center; margin-bottom: 50px; ">we,ll just upload all files ct , solns assignments <br> we got you covered lol 
+<br>so don't judge our website by its cover but by its contents 
+<br>ok enough rambling now !!</p>
+
+<hr>
+<h1 style="font-size: 50px;text-align:center; "> random images for absolutely no reason </h1>
+
+
+<img style="width: 33%;" src="image4.png">
+<img style="width: 33%;"src="image3.png">
+<img style="width: 33%;" src="image2.png">
+<hr>
+
+<h1 style="font-size: 50px;text-align:center; margin-below: 80px"> now the main stuff  </h1>
+
+
+<div style = " text-align:center;">
+<a style = " font-size: 20px;background-color: green ; padding: 15px 35px 15px 35px ;color: white;" href  = " https://www.youtube.com/watch?v=xvFZjo5PgG0 ">  lets go there </a>
+</div>
+<hr>
+i mean seriously <br>
+
+<div style = " text-align:center; margin-top: 20px;">
+<a style = " padding-bottom: 20px;" href="https://drive.google.com/drive/folders/1jBFG03fQGBMwHQBIXF-xAGLVP4H9pHil?usp=sharing">Autumn 2024</a> 
+<br><hr>
+<a " padding-bottom: 20px;" href="#">Spring 2024</a>
+</div>
