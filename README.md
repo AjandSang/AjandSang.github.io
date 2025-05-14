@@ -1,12 +1,10 @@
-# AjandSang.github.io
+
 <div style = " text-align:center; margin-top: 20px;"><img style="width: 33%;" src="image5.png">
  </div>
 
 
 
 <h1 style="font-size: 70px;text-align:center; "> Hello random person </h1>
-
-
 
 
 <p style="font-size: 20px;text-align:center; line height = 20px : margin-bottom: 20px; ">
@@ -23,8 +21,8 @@ still working so...</p>
 
 
 <img style="width: 33%;" src="image4.png">
-<img style="width: 33%;"src="image3.png">
-<img style="width: 33%;"src="image2.png">
+<img style="width: 33%;" src="image3.png">
+<img style="width: 33%;" src="image2.png">
 <hr>
 
 <h1 style="font-size: 50px;text-align:center; margin-below: 80px"> now the main stuff  </h1>
