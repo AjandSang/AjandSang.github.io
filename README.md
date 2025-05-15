@@ -22,7 +22,7 @@ still working so...</p>
 
 
 <img style="width: 33%;" src="image4.png">
-<img style="width: 33%;"src="image3.png">
+<img style="width: 33%;" src="image3.png">
 <img style="width: 33%;" src="image2.png">
 <hr>
 
