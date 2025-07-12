@@ -1,35 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aj's stuff</title>
-    <style>
-        body {
-            background-image: url('background.png'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+  <meta charset="UTF-10" />
+  <title>Aj's personal website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    div {
+      letter-spacing: 2px;
+    }
+    body {
+      margin: 0;
+      scroll-behavior: smooth;
+      font-family: 'Orbitron', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
-        .text-box {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 300px;
-        }
-    </style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+      z-index: -1;
+    }
+
+    html {
+      scroll-snap-type: y mandatory;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+    }
+
+    .card-link {
+      text-decoration: none;
+      display: block;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.75);
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 30px cyan;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+      cursor: pointer;
+    }
+
+    section:nth-child(even) .card {
+      box-shadow: 0 0 30px magenta;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 40px lime;
+    }
+
+    nav {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: cyan;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+      padding: 1rem;
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .typewriter {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#cursor {
+  display: inline-block;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+  </style>
 </head>
 <body>
-    <div class="text-box">
-        <h2>Welcome!</h2>
-        <p>THis is the website in progress of a professional procrastinator , so the website may be ready any time between the next 5 days to the next five years :) </p>
+
+  <nav>
+   
+    <a href="#home">Home</a>
+    <a href="#Arts and calligraphy">Arts and calligraphy</a>
+    <a href="#books and stuff">books and stuff</a>
+    <a href="#random">random</a>
+    <a href="#about">about</a>
+  </nav>
+
+  <section id="about">
+    
+      <div class="card">
+      <h1 class="typewriter">
+        <span id="text"></span><span id="cursor">|</span>
+      </h1>
+
+      <p>Hi there, I'm Aj — just another undergrad at IISER K </p><p>yet another one of the uncountably many secretly dreaming of a _______ major (iykyk).</p>
+           <p>This website is, in true academic spirit, perpetually under construction.</p>
+              <p> If you're here strictly for notes, head straight to __.</p>
+              <p> But if you’re looking to procrastinate productively, I’ve got plenty of distractions in store.</p> 
+               <p>   (yes i like to use the word procrastinate too much)</p>
     </div>
+      
+  </section>
+  <section id="home">
+   <!-- a href="" target="_blank" class="card-link" > remove the end parts in case u want to add link -->
+      <div class="card">
+        <h1>Welcome to My Site</h1>
+        <p>Scroll down to explore ...</p>
+        <p>What I Do When I’m Not Drowning in Assignments (My side quests).</p>
+      </div>
+   <!-- </a>-->
+  </section>
+
+  <section id="Arts and calligraphy">
+    <a href="https://example.com/projects" target="_blank" class="card-link">
+      <div class="card">
+        <h2>Arts and calligraphy</h2>
+        <p>🎨 Go ahead, take a peek at the art—I’m far better with a brush than with words. </p>
+      </div>
+    </a>
+  </section>
+
+  <section id="books and stuff">
+    <a href="https://example.com/about" target="_blank" class="card-link">
+      <div class="card">
+        <h2>books and stuff</h2>
+        <p>Things I read and things I watched.</p>
+        <p>I am a (self) certified bibliophile, here are some of the books that I really loved </p>
+      </div>
+    </a>
+  </section>
+  <section id="random">
+    <a href="https://example.com/about" target="_blank" class="card-link">
+      <div class="card">
+        <h2>Blogs and stuff</h2>
+        <p>stuff i tried to write</p>
+      </div>
+    </a>
+  </section>
+  <section id="nope">
+    <a href="https://example.com/about" target="_blank" class="card-link">
+      <div class="card">
+        <h2>About Me</h2>
+        <p>Who I am, what I love, and how I got here.</p>
+      </div>
+    </a>
+  </section>
+
+ 
+
+  <footer>
+    AJ &copy; All rights and lefts reserved.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+  <script>
+  const messages = [
+    "Hi there I am Aj ",
+    "This is my personal website ",
+    "Scroll away my fellow procrastinator ",
+    
+];
+
+  let index = 0;
+  let charIndex = 0;
+  const typingSpeed = 100;
+  const pauseTime = 2000;
+  const textSpan = document.getElementById("text");
+
+  function typeMessage() {
+  const message = messages[index];
+  
+  // Clear text before new message starts
+  if (charIndex === 0) {
+    textSpan.textContent = '';
+  }
+
+  if (charIndex < message.length) {
+    textSpan.textContent += message.charAt(charIndex);
+    charIndex++;
+    setTimeout(typeMessage, typingSpeed);
+  } else {
+    // Hold the message, then move on
+    setTimeout(() => {
+      charIndex = 0;
+      index = (index + 1) % messages.length;
+      textSpan.textContent = ''; // Ensure clean slate
+      typeMessage();
+    }, pauseTime);
+  }
+}
+
+
+
+  typeMessage();
+</script>
+
 </body>
 </html>
