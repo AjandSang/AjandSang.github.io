@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stuffs Aj watched and Read </title>
+  <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+
+<style>
+  section.about p span {
+  letter-spacing: 0.8px;
+  font-size: 1.3rem; /* Slightly bigger */
+  background-color: rgba(240, 240, 240, 0.5); /* soft gray box */
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+
+    .large-text {
+  font-size: 1.8rem;
+}
+
+.small-text {
+  font-size: 0.9rem;
+}
+
+
+    body.light-mode .about h2 {
+  color: rgb(51, 42, 42); /* dark tone for light mode */
+}
+
+body.dark-mode .about h2 {
+  color: #ffffff; /* bright white for dark mode */
+}
+
+    body.light-mode .about span {
+  color: rgb(51, 42, 42); /* dark text for light mode */
+   }
+
+   body.dark-mode .about span {
+  color: #fff; /* white text for dark mode */
+    }
+
+    :root {
+      --bg-light: #f9f4ee;
+      --bg-dark: #1b1b1b;
+      --text-color: #e0e0e0;
+      --shadow-light: rgba(0, 0, 0, 0.4);
+      --shadow-dark: rgba(12, 11, 11, 0.281);
+    }
+
+    body {
+  margin: 0;
+  font-family: 'Emilys Candy', cursive;
+  color: var(--text-color);
+  transition: background-color 0.6s ease, color 0.6s ease;
+
+  letter-spacing: 1.3px;  /* spacing between letters */
+  line-height: 1.99;        /* spacing between lines */
+}
+
+
+    body.light-mode {
+      background-color: var(--bg-light);
+      background-image: url('lightboo.png');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      background-image: url('darkbookshelf.png'); /* Replace with your image */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      text-align: right;
+    }
+
+    #themeToggle {
+      font-size: 1.5rem;
+      padding: 0.5rem 0.8rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    section.about {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    section.about img {
+      width: 300px;
+      height: 340px;
+      border-radius: 50% / 40%;
+      box-shadow: 0 12px 28px var(--shadow-light);
+      margin-bottom: 1.5rem;
+    }
+
+    section.about h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    section.about p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .fade-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem 1rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-header.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-header h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .review-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      gap: 2rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .review-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .review-section:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+
+    .review-img {
+      width: 260px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px var(--shadow-light);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .review-text {
+      text-align: center;
+      max-width: 800px;
+      padding: 1rem;
+      border-radius: 15px;
+      background-color: rgba(44, 44, 44, 0.7);
+      color: #f0f0f0;
+      box-shadow: 0 12px 30px var(--shadow-light);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .review-section.visible .review-img,
+    .review-section.visible .review-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    body.dark-mode .review-img {
+      box-shadow: 0 12px 30px var(--shadow-dark);
+    }
+
+    body.dark-mode .review-text {
+      background-color: rgba(30, 30, 30, 0.7);
+      color: #e0e0e0;
+      box-shadow: 0 12px 30px var(--shadow-dark);
+    }
+
+    .review-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .review-text p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1rem;
+    }
+
+    a {
+      color: #ccc;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="light-mode">
+  <header>
+    <button id="themeToggle">☀️</button>
+  </header>
+
+  <section class="about visible">
+    <img src="abt.png" alt="Your Portrait" />
+    <h2>Wilkommen</h2>
+    <p ><span >Since custom demands this section exists .Here are some readable and watchable stuff i enjoyed and hope you too would have the same opinion about
+      Click on the icon on far right corner for fun. NB names might miss or have an extra 'The' since i was too lazy to confirm it . Yes I have rewatched F.R.I.E.N.D.S 
+    three times </span></p>
+  </section>
+
+  <section class="fade-header">
+    <h2>THINGS TO READ</h2>
+  </section>
+
+  <section class="review-section">
+    <img class="review-img" src="dumas.png" alt="Author 1" />
+    <div class="review-text">
+      <h2 >The Count of Monte Cristo</h2>
+      <p>Alexandre Dumas (Tr. Robin Buss , penguin publishers)</p>
+      <p>I've recommended this book to so many people, I’ve lost count. </p>
+     <p>But I do know exactly how many actually read it—spoiler alert: it’s the smallest whole number. So why not break the trend and give it a shot?</p>
+    <p> I promise, you won’t be disappointed. </p>
+    </div>
+  </section>
+
+  <section class="review-section">
+    <img class="review-img" src="oneflew.png" alt="Author 2" />
+    <div class="review-text">
+      <h2>One Flew Over The Cuckoo's Nest</h2>
+      <h3>Ken Kesey</h3>
+      <p>It isn’t just a novel—it’s a riot against conformity, a masterpiece of rebellion, and proof that sanity is sometimes the craziest thing of all.  Read it for the nuance. Watch it for the chaos. 
+        And if you still think Nurse Ratchet and her minions are not terrifying............</p>
+          <p> we need to talk. </p>
+    </div>
+  </section>
+  <section class="review-section">
+    <img  class="review-img" src="abouttpic.png" alt="Author 1" />
+    <div class="review-text">
+      <h2 >highly recommended ones (since i am lazy)</h2>
+      <p>here are some books i really loved </p>
+      <p>On Earth We are Briefly Gorgeous , God of Small Things , The Godfather</p>
+     <p>Good Omens , Cat's Cradle , Three Men in a Boat , And Then There Were None , FELUDAAAA</p>
+    <p> I promise, you won’t be disappointed.</p>
+    </div>
+  </section>
+
+  <section class="fade-header">
+    <h2>THINGS TO WATCH</h2>
+  </section>
+
+  <section class="review-section">
+    <img class="review-img" src="feluda.jpg" alt="Movie 1" />
+    <div class="review-text">
+      <h2>Sonar Kella + Joy Baba Felunath</h2>
+      <p>WATCH BOTHH (yes i am yelling if you have not seen them already)</p>
+      <p>if you haven't watched these yet, what exactly are you doing with your life? These are not just films, they’re cinematic rites of passage.</p>
+      <p>Satyajit Ray didn’t craft masterpieces so you could ignore them. Fix this immediately. Seriously. Go. Now."</p>
+    </div>
+  </section>
+
+  <section class="review-section">
+    <img class="review-img" src="friends.png" alt="Movie 2" />
+    <div class="review-text">
+      <h2>F.R.I.E.N.D.S</h2>
+      <p>Need I say more?</p>
+      
+    </div>
+  </section>
+
+  <section class="review-section">
+    <img class="review-img" src="gof.png" alt="Movie 1" />
+    <div class="review-text">
+      <h2>Grave of The Fireflies</h2>
+      <p>Feeling too happy? This film will fix that—by breaking you.  </p>
+      <p>A raw, unfiltered portrayal of war’s toll.  </p>
+      <p>Watch only if you’re ready for the ache. </p>
+    </div>
+  </section>
+   <section class="review-section">
+    <img class="review-img" src="ghs.png" alt="Movie 1" />
+    <div class="review-text">
+      <h2>Golpo Holeo Sottyi</h2>
+      <p>it is the proof that cinema once had the power to soothe chaos with quiet charm. Soul-good, not just feel-good. 
+        And yes, that golden era of Bengali cinema? Gone like Bhanu’s patience when someone interrupts his monologue.
+        Rabi and Bhanu together? That’s not casting—that’s divine intervention. 
+        Honestly, if you're not watching this, do you even deserve joy? </p>
+    </div>
+  </section>
+   <section class="review-section">
+    <img class="review-img" src="mov.png" alt="Movie 1" />
+    <div class="review-text">
+      <h2>I got lazy Part 2</h2>
+      <p>Death Note , The Scent of A Woman , Forrest Gump , The Shawshank Redemption, Schindler's List , 
+        Atonement , Ganashatru </p>
+        </div>
+  </section>
+
+  
+
+ <script>
+  const toggleBtn = document.getElementById("themeToggle");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
+    toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
+  });
+
+  const sections = document.querySelectorAll(".review-section, .fade-header");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible"); // ✨ REMOVE when not visible
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
