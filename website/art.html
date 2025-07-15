@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #e6d8c3;
+      --text-color: #333;
+      --shadow-color: rgba(50, 50, 50, 0.4);
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #f5f5dc;
+      --shadow-color: rgba(220, 220, 220, 0.3);
+      background-color: var(--bg-color);
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      background-blend-mode: screen;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg-color);
+      background-image:
+        url('https://www.transparenttextures.com/patterns/asfalt-dark.png'),
+        url('https://www.transparenttextures.com/patterns/noise.png');
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      background-blend-mode: multiply;
+      color: var(--text-color);
+      font-family: 'Viaoda Libre', cursive;
+      transition: background-color 0.6s ease, color 0.6s ease;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.08);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      text-align: right;
+    }
+
+    #themeToggle {
+      font-size: 1.6rem;
+      padding: 0.4rem 0.7rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+    body.light-mode #themeToggle {
+      filter: drop-shadow(0 0 8px #ffd700);
+      transform: scale(1.1);
+    }
+
+    body.dark-mode #themeToggle {
+      filter: none;
+      transform: scale(1);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 1rem auto;
+      line-height: 1.6;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .intro img, .gallery-row img {
+      cursor: pointer;
+      box-shadow: 0 12px 30px var(--shadow-color);
+    }
+
+    .intro img {
+      width: 310px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .gallery-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-row img {
+      width: 300px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .contact a {
+      color: var(--text-color);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--text-color);
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .modal-content {
+      max-width: 80vw;
+      max-height: 80vh;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      text-align: center;
+      padding: 1rem;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .modal-caption {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+      background: transparent;
+      border: none;
+    }
+  </style>
+</head>
+<body class="light-mode">
+
+  <header>
+    <button id="themeToggle">☀️</button>
+  </header>
+
+  <section class="intro">
+    <img src="C:\aj website\art_pics\artdp.png" alt="Self-portrait with strong curiosity for media">
+    <div>
+      <h2>About Me</h2>
+      <p>I’m just excessively curious about different media but I am too broke to buy them.</p>
+      <p>Below are some things I drew over the years.</p>
+      <p>In case you like them I’ll sell it or do commissions (if I survive after submitting the assignments).</p>
+      <p>Do click on the drawings for a bigger view</p>
+      <p>All reference pics have been used from pinterest  </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Acrylic Work</h2>
+    <div class="gallery-row">
+      <img src="C:\aj website\art_pics\acrylic1.png" alt="Horsie yee haw! (canvas)">
+      <img src="C:\aj website\art_pics\acrylic2.png" alt="potter (paper)">
+      <img src="C:\aj website\art_pics\acrylic3.png" alt="Debjyoti baruah vid draw along (paper)">
+      <img src="C:\aj website\art_pics\acrylic4.png" alt="Howl and calcifer (paper)">
+      <img src="C:\aj website\art_pics\acrylic5.png" alt="conscience (paper)">
+      <img src="C:\aj website\art_pics\acrylic6.png" alt="Kabiguru (paper)">
+    </div>
+  </section>
+
+  <section>
+    <h2>Charcoal and Graphite</h2>
+    <div class="gallery-row">
+      <img src="C:\aj website\art_pics\Graphite1.png" alt="Charcoal on toned paper">
+      <img src="C:\aj website\art_pics\Graphite2.png" alt="TAMINO">
+      <img src="C:\aj website\art_pics\Graphite3.png" alt="Charcoal on Paper">
+      <img src="C:\aj website\art_pics\Graphite4.png" alt="Graphite on Paper">
+      <img src="C:\aj website\art_pics\Graphite5.png" alt="Graphite on Paper">
+    </div>
+  </section>
+
+  <section>
+    <h2>Ink Drawings</h2>
+    <div class="gallery-row">
+      <img src="C:\aj website\art_pics\ink1.png" alt="fav scene from fav anime">
+      <img src="C:\aj website\art_pics\ink2.png" alt="Bang Bang !">
+      <img src="C:\aj website\art_pics\ink3.png" alt="when you buy a precision knife and have to use it">
+      <img src="C:\aj website\art_pics\ink4.png" alt="iykyk">
+      <img src="C:\aj website\art_pics\ink5.png" alt="kalego (for a friend)">
+      <img src="C:\aj website\art_pics\ink6.png" alt="setsuko">
+    </div>
+  </section>
+
+  <section>
+    <h2>Cards and Calligraphy</h2>
+    <div class="gallery-row">
+      <img src="C:\aj website\art_pics\card1.png" alt="Things made for our stall odd pallete">
+      <img src="C:\aj website\art_pics\card2.png" alt="Cheesy quotes i know but people buy it">
+      <img src="C:\aj website\art_pics\card3.png" alt="Card for a friend">
+      <img src="C:\aj website\art_pics\card4.png" alt="Card for a friend">
+      <img src="C:\aj website\art_pics\card5.png" alt="Certificates for a event">
+
+    </div>
+  </section>
+  <section>
+    <h2>Reverse glass paintings </h2>
+    <div class="gallery-row">
+      <img src="C:\aj website\art_pics\rg1.png" alt="eggsy">
+      <img src="C:\aj website\art_pics\rg2.png" alt="benedict cucumberpatch">
+      
+      
+    </div>
+  </section>
+
+  <section>
+    <h2>Random tiger drawings</h2>
+    <div class="gallery-row">
+      <img src="C:\aj website\art_pics\tig1.png" alt="Zu elegante">
+      <img src="C:\aj website\art_pics\tig2.png" alt="chonky">
+      <img src="C:\aj website\art_pics\tig3.png" alt="angwy">
+      
+    </div>
+  </section>
+    <section>
+    <h2>Watercolor aka my biggest fear</h2>
+    <div class="gallery-row">
+      <img src="C:\aj website\art_pics\wt1.png" alt="for some competition i dont remember">
+      <img src="C:\aj website\art_pics\wt2.png" alt="for the very good on right">
+      <img src="C:\aj website\art_pics\wt3.png" alt="made for besto frendo">
+      
+    </div>
+  </section>
+
+  <section>
+    <h2>Miscellaneous</h2>
+    <div class="gallery-row">
+      <img src="C:\aj website\art_pics\missc1.png" alt="shouldn't play with food they said">
+      <img src="C:\aj website\art_pics\missc2.png" alt="Achoo!">
+      <img src="C:\aj website\art_pics\missc3.png" alt="When u can't draw baloons">
+      
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Let’s collaborate so that I can buy gouache.</p>
+    <!--<p>Email: <a href="mailto:ajandsang@gmail.com">My mail</a></p> -->
+    <p>W App: find Edmound Dantes in arts club</p>
+  </section>
+
+  <!-- Modal viewer -->
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">×</button>
+      <img id="modalImage" src="" alt="Large View">
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const toggleBtn = document.getElementById("themeToggle");
+
+    function checkVisibility() {
+      const threshold = window.innerHeight * 0.75;
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < threshold && rect.bottom > 100) {
+          section.classList.add("visible");
+        } else {
+          section.classList.remove("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    window.addEventListener("load", checkVisibility);
+
+    toggleBtn.addEventListener("click", () => {
+       document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("light-mode"); // Change button emoji on theme toggle 
+        if (document.body.classList.contains("dark-mode")) { toggleBtn.textContent = "🌙"; } else { toggleBtn.textContent = "☀️"; }
+    });
+
+    // Modal functionality
+    const galleryImages = document.querySelectorAll(".gallery-row img, .intro img");
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalCaption = document.getElementById("modalCaption");
+
+    galleryImages.forEach(img => {
+      img.addEventListener("click", () => {
+        if (img.src) {
+          modalImage.src = img.src;
+          modalCaption.textContent = img.alt || "Artwork from portfolio";
+          modal.style.display = "flex";
+        }
+      });
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+      modalImage.src = "";
+      modalCaption.textContent = "";
+    }
+    
+  </script>
+</body>
+</html>
