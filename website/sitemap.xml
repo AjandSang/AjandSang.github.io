@@ -5,14 +5,14 @@
   <url>
     <loc>https://ajandsang.github.io/website/index.html</loc>
     <lastmod>2025-09-15</lastmod>
-    <priority>1.0</priority>
+    <priority>0.5</priority>
   </url>
 
   <!-- AJ Page -->
   <url>
     <loc>https://ajandsang.github.io/website/aj.html</loc>
     <lastmod>2025-09-15</lastmod>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
 
   <!-- Sang Page -->
